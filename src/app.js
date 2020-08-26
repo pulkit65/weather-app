@@ -54,14 +54,14 @@ app.get('/weather',(req,res)=>{
                      error: error
                     })
             }
-            forecast.forecast(latitude, longitude, (error, {summary,precipType,temperature}={}) => {
+            forecast.forecast(latitude, longitude, (error, {summary,precipType,temperature,highTemperature,lowTemperature}={}) => {
                 if(error){
                     return res.send({
                         error: error
                     })
                 }
                      res.send({
-                        forecast: summary+precipType+temperature,
+                        forecast: summary+'. It is currently '+ precipType+' '+temperature+' form  '+lowTemperature+' to '+highTemperature,
                         location:location
                     }) 
                 })

@@ -13,7 +13,9 @@ const forecast = (latitude,longitude,callback)=>{
             callback(undefined,{
                 summary:body.daily.data[0].summary,
                 precipType:body.daily.data[0].precipType,
-                temperature: body.currently.temperature
+                temperature: body.currently.temperature,
+                highTemperature: body.daily.data[0].temperatureHigh,
+                lowTemperature: body.daily.data[0].temperatureLow
             })
         }
     })
