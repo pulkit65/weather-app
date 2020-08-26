@@ -48,13 +48,13 @@ app.get('/weather',(req,res)=>{
             error:'First provide an address'
         })
     }
-        geocode.geocodeURL(req.query.address,(error,{latitude,longitude,location})=>{
+        geocode.geocodeURL(req.query.address,(error,{latitude,longitude,location}={})=>{
                if(error){
                  return res.send({
                      error: error
                     })
             }
-            forecast.forecast(latitude, longitude, (error, {summary,precipType,temperature}) => {
+            forecast.forecast(latitude, longitude, (error, {summary,precipType,temperature}={}) => {
                 if(error){
                     return res.send({
                         error: error
