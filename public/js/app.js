@@ -1,4 +1,4 @@
-console.log('RESPONSE FROM A CLIENT SIDE SERVER')
+
 
 // fetch('http://puzzle.mead.io/puzzle').then((response)=>{
 //     response.json().then((data)=>{
