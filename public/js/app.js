@@ -24,7 +24,7 @@ weatherForm.addEventListener('submit',(e)=>{
             }
         })
     })
-
+})
     // fetch('http://localhost:3000/weather?address='+location).then((response)=>{
     //     response.json().then((data)=>{
     //         if(data.error){
@@ -40,7 +40,7 @@ weatherForm.addEventListener('submit',(e)=>{
     // })
    // console.log('testing')
     //console.log(location)
-})
+
 
 // fetch('http://puzzle.mead.io/puzzle').then((response)=>{
 //     response.json().then((data)=>{
