@@ -3,7 +3,10 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocede.js')
 const forecast = require('./utils/forecast.js')
+
 const app = express()
+
+const port = process.env.PORT || 3000
 
 //define path for express config
 const directoryName = path.join(__dirname,'../public')
@@ -93,9 +96,14 @@ app.get('/weather',(req,res)=>{
         errorMsg: 'Page Not Found'
      })
  })
- app.listen(3000,()=>{
-     console.log('Server listen at port 3000!')
- })
+
+ app.listen(port,()=>{
+    console.log('Server listen at port '+port)//for heroku server
+})
+
+//  app.listen(3000,()=>{
+//      console.log('Server listen at port 3000!')
+//  })
 
 
 
